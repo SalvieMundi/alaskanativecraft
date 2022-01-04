@@ -45,9 +45,9 @@ public class AlaskaNativeCraftClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(AlaskaEntities.DIAMOND_HARPOON, HarpoonEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(AlaskaEntities.NETHERITE_HARPOON, HarpoonEntityRenderer::new);
 
-        EntityRendererRegistry.INSTANCE.register(AlaskaEntities.HARP_SEAL, SealEntityRenderer::new);
+//        EntityRendererRegistry.INSTANCE.register(AlaskaEntities.HARP_SEAL, SealEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(AlaskaEntities.PTARMIGAN, PtarmiganEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(AlaskaEntities.MOOSE, MooseEntityRenderer::new);
+//        EntityRendererRegistry.INSTANCE.register(AlaskaEntities.MOOSE, MooseEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(AlaskaEntities.DOGSLED, DogsledEntityRenderer::new);
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
@@ -96,9 +96,9 @@ public class AlaskaNativeCraftClient implements ClientModInitializer {
     @Environment(EnvType.CLIENT)
     public static void registerBlockRenderLayers() {
         RenderLayer cutout = RenderLayer.getCutout();
-        BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.BLUEBERRY_BUSH, cutout);
+//        BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.BLUEBERRY_BUSH, cutout);
         BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.CLOUDBERRY_BUSH, cutout);
-        BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.RASPBERRY_BUSH, cutout);
+//        BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.RASPBERRY_BUSH, cutout);
         BlockRenderLayerMap.INSTANCE.putBlock(AlaskaBlocks.SALMONBERRY_BUSH, cutout);
     }
 

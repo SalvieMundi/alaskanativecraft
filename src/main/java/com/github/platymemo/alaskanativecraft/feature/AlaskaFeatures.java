@@ -30,17 +30,17 @@ public class AlaskaFeatures {
     public static void register() {
         AlaskaConfig.GenerationOptions genOptions = AlaskaConfig.getConfig().generation;
 
-        if (genOptions.genBlueberry) {
-            registerBerryPatch(AlaskaBlocks.BLUEBERRY_BUSH, "blueberry_bush");
-        }
+//        if (genOptions.genBlueberry) {
+//            registerBerryPatch(AlaskaBlocks.BLUEBERRY_BUSH, "blueberry_bush");
+//        }
 
         if (genOptions.genCloudberry) {
             registerBerryPatch(AlaskaBlocks.CLOUDBERRY_BUSH, "cloudberry_bush");
         }
 
-        if (genOptions.genRaspberry) {
-            registerBerryPatch(AlaskaBlocks.RASPBERRY_BUSH, "raspberry_bush");
-        }
+//        if (genOptions.genRaspberry) {
+//            registerBerryPatch(AlaskaBlocks.RASPBERRY_BUSH, "raspberry_bush");
+//        }
 
         if (genOptions.genSalmonberry) {
             registerBerryPatch(AlaskaBlocks.SALMONBERRY_BUSH, "salmonberry_bush");

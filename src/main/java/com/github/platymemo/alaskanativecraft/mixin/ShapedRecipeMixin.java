@@ -23,7 +23,7 @@ public class ShapedRecipeMixin {
 
     @Inject(at = @At("RETURN"), method = "craft", cancellable = true)
     private void addDurability(@NotNull CraftingInventory craftingInventory, CallbackInfoReturnable<ItemStack> cir) {
-        if (craftingInventory.containsAny(Set.of(AlaskaItems.DRIFTWOOD_CHUNK, AlaskaItems.ANTLER, AlaskaItems.IVORY)) && this.output.getItem().isDamageable()) {
+        if (craftingInventory.containsAny(Set.of(AlaskaItems.DRIFTWOOD_CHUNK/*, AlaskaItems.ANTLER, AlaskaItems.IVORY*/)) && this.output.getItem().isDamageable()) {
             ItemStack protectedItem = this.output.copy();
             NbtCompound tag = protectedItem.getOrCreateNbt();
             float durabilityMultiplier = 1;
@@ -31,11 +31,11 @@ public class ShapedRecipeMixin {
                 ItemStack stack = craftingInventory.getStack(i);
                 if (stack.isOf(AlaskaItems.DRIFTWOOD_CHUNK)) {
                     durabilityMultiplier *= 1.05;
-                } else if (stack.isOf(AlaskaItems.ANTLER)) {
+                } /* else if (stack.isOf(AlaskaItems.ANTLER)) {
                     durabilityMultiplier *= 1.2;
                 } else if (stack.isOf(AlaskaItems.IVORY)) {
                     durabilityMultiplier *= 1.4;
-                }
+                } */
             }
             tag.putFloat("DurabilityMultiplier", durabilityMultiplier);
             cir.setReturnValue(protectedItem);

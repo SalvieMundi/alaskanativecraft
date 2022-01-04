@@ -4,7 +4,12 @@
     "alaskanativecraft:cloudberries",
     "alaskanativecraft:salmonberries",
     "minecraft:sweet_berries",
-    "#c:blueberries",
-    "#c:raspberries"
+    "croptopia:blueberry",
+    "croptopia:raspberry",
+    "croptopia:blackberry",
+    "croptopia:cranberry",
+    "croptopia:elderberry",
+    "betterend:blossom_berry",
+    "betterend:shadow_berry"
   ]
 }

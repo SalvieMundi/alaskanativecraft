@@ -17,7 +17,6 @@
     "LivingEntityMixin",
     "MeleeAttackGoalAccessor",
     "PlayerEntityMixin",
-    "PolarBearMixin",
     "PowderSnowBlockMixin",
     "RepairItemRecipeMixin",
     "ShapedRecipeMixin",

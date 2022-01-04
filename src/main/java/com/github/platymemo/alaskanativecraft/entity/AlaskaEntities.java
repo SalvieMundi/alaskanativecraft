@@ -22,9 +22,9 @@ import java.util.Map;
 public class AlaskaEntities {
     private static final Map<Identifier, EntityType<?>> ENTITY_TYPES = new LinkedHashMap<>();
 
-    public static final EntityType<SealEntity> HARP_SEAL = add("harp_seal", createEntity(SpawnGroup.WATER_CREATURE, SealEntity::new, true, 1.0F, 0.6F));
+//    public static final EntityType<SealEntity> HARP_SEAL = add("harp_seal", createEntity(SpawnGroup.WATER_CREATURE, SealEntity::new, true, 1.0F, 0.6F));
     public static final EntityType<PtarmiganEntity> PTARMIGAN = add("ptarmigan", createEntity(SpawnGroup.AMBIENT, PtarmiganEntity::new, false, 0.5F, 0.5F));
-    public static final EntityType<MooseEntity> MOOSE = add("moose", createEntity(SpawnGroup.CREATURE, MooseEntity::new, true, 3F, 2.6F));
+//    public static final EntityType<MooseEntity> MOOSE = add("moose", createEntity(SpawnGroup.CREATURE, MooseEntity::new, true, 3F, 2.6F));
     public static final EntityType<DogsledEntity> DOGSLED = add("dogsled", createEntity(SpawnGroup.MISC, DogsledEntity::new, false, 1.5F, 1.0F));
 
     public static final EntityType<HarpoonEntity> WOODEN_HARPOON = add("wooden_harpoon", createHarpoon(AlaskaItems.WOODEN_HARPOON));
@@ -45,35 +45,35 @@ public class AlaskaEntities {
     }
 
     private static void initSpawnRestrictions() {
-        SpawnRestrictionAccessor.callRegister(HARP_SEAL, SpawnRestriction.Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SealEntity::canSpawn);
-        SpawnRestrictionAccessor.callRegister(MOOSE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
+//        SpawnRestrictionAccessor.callRegister(HARP_SEAL, SpawnRestriction.Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SealEntity::canSpawn);
+//        SpawnRestrictionAccessor.callRegister(MOOSE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
         SpawnRestrictionAccessor.callRegister(PTARMIGAN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, PtarmiganEntity::isValidSpawn);
     }
 
     private static void initAttributes() {
-        FabricDefaultAttributeRegistry.register(HARP_SEAL, SealEntity.createSealAttributes());
+//        FabricDefaultAttributeRegistry.register(HARP_SEAL, SealEntity.createSealAttributes());
         FabricDefaultAttributeRegistry.register(PTARMIGAN, PtarmiganEntity.createPtarmiganAttributes());
-        FabricDefaultAttributeRegistry.register(MOOSE, MooseEntity.createMooseAttributes());
+//        FabricDefaultAttributeRegistry.register(MOOSE, MooseEntity.createMooseAttributes());
     }
 
     @SuppressWarnings("deprecation")
     private static void initSpawns() {
         AlaskaConfig.SpawnOptions spawnOptions = AlaskaConfig.getConfig().spawning;
-        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.OCEAN),
-                SpawnGroup.WATER_CREATURE, HARP_SEAL,
-                spawnOptions.sealOceanSettings.weight,
-                spawnOptions.sealOceanSettings.minGroupSize,
-                spawnOptions.sealOceanSettings.maxGroupSize);
-        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.RIVER),
-                SpawnGroup.WATER_CREATURE, HARP_SEAL,
-                spawnOptions.sealRiverSettings.weight,
-                spawnOptions.sealRiverSettings.minGroupSize,
-                spawnOptions.sealRiverSettings.maxGroupSize);
-        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.TAIGA, Biome.Category.ICY, Biome.Category.FOREST),
-                SpawnGroup.CREATURE, MOOSE,
-                spawnOptions.mooseSettings.weight,
-                spawnOptions.mooseSettings.minGroupSize,
-                spawnOptions.mooseSettings.maxGroupSize);
+//        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.OCEAN),
+//                SpawnGroup.WATER_CREATURE, HARP_SEAL,
+//                spawnOptions.sealOceanSettings.weight,
+//                spawnOptions.sealOceanSettings.minGroupSize,
+//                spawnOptions.sealOceanSettings.maxGroupSize);
+//        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.RIVER),
+//                SpawnGroup.WATER_CREATURE, HARP_SEAL,
+//                spawnOptions.sealRiverSettings.weight,
+//                spawnOptions.sealRiverSettings.minGroupSize,
+//                spawnOptions.sealRiverSettings.maxGroupSize);
+//        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.TAIGA, Biome.Category.ICY, Biome.Category.FOREST),
+//                SpawnGroup.CREATURE, MOOSE,
+//                spawnOptions.mooseSettings.weight,
+//                spawnOptions.mooseSettings.minGroupSize,
+//                spawnOptions.mooseSettings.maxGroupSize);
         BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.TAIGA, Biome.Category.ICY, Biome.Category.FOREST),
                 SpawnGroup.AMBIENT, PTARMIGAN,
                 spawnOptions.ptarmiganSettings.weight,

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#c:venison",
+    "adventurez:raw_venison",
     "minecraft:salmon",
     "minecraft:cod"
   ]

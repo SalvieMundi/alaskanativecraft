@@ -21,9 +21,9 @@ import net.minecraft.util.registry.Registry;
 
 public class AlaskaBlocks {
     public static final WhaleMeatBlock WHALE_MEAT_BLOCK;
-    public static final BlueberryBushBlock BLUEBERRY_BUSH;
+//    public static final BlueberryBushBlock BLUEBERRY_BUSH;
     public static final CloudberryBushBlock CLOUDBERRY_BUSH;
-    public static final RaspberryBushBlock RASPBERRY_BUSH;
+//    public static final RaspberryBushBlock RASPBERRY_BUSH;
     public static final SalmonberryBushBlock SALMONBERRY_BUSH;
     public static final PillarBlock DRIFTWOOD_LOG;
     public static final DryingRackBlock DRYING_RACK;
@@ -31,9 +31,9 @@ public class AlaskaBlocks {
 
     static {
         WHALE_MEAT_BLOCK = register("whale_meat_block", new WhaleMeatBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).breakByTool(AlaskaTags.ULUS).sounds(BlockSoundGroup.HONEY).strength(1.0F, 1.0F)), ItemGroup.BREWING);
-        BLUEBERRY_BUSH = register("blueberry_bush", new BlueberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+//        BLUEBERRY_BUSH = register("blueberry_bush", new BlueberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
         CLOUDBERRY_BUSH = register("cloudberry_bush", new CloudberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
-        RASPBERRY_BUSH = register("raspberry_bush", new RaspberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+//        RASPBERRY_BUSH = register("raspberry_bush", new RaspberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
         SALMONBERRY_BUSH = register("salmonberry_bush", new SalmonberryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
         DRIFTWOOD_LOG = register("driftwood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
         DRYING_RACK = register("drying_rack", new DryingRackBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), ItemGroup.DECORATIONS);
@@ -87,9 +87,9 @@ public class AlaskaBlocks {
         flammableRegistry.add(WHALE_MEAT_BLOCK, 60, 100);
         flammableRegistry.add(DRIFTWOOD_LOG, 5, 5);
         flammableRegistry.add(DRYING_RACK, 5, 5);
-        flammableRegistry.add(BLUEBERRY_BUSH, 60, 100);
+//        flammableRegistry.add(BLUEBERRY_BUSH, 60, 100);
         flammableRegistry.add(CLOUDBERRY_BUSH, 60, 100);
-        flammableRegistry.add(RASPBERRY_BUSH, 60, 100);
+//        flammableRegistry.add(RASPBERRY_BUSH, 60, 100);
         flammableRegistry.add(SALMONBERRY_BUSH, 60, 100);
     }
 

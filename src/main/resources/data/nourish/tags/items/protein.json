@@ -2,12 +2,10 @@
   "values": [
     "alaskanativecraft:fish_strip",
     "alaskanativecraft:dry_fish",
-    "alaskanativecraft:seal",
-    "alaskanativecraft:cooked_seal",
     "alaskanativecraft:ptarmigan",
     "alaskanativecraft:cooked_ptarmigan",
-    "alaskanativecraft:venison",
-    "alaskanativecraft:cooked_venison"
+    "adventurez:raw_venison",
+    "adventurez:cooked_venison"
   ]
 }
 

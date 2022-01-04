@@ -5,7 +5,7 @@ import com.github.platymemo.alaskanativecraft.entity.AlaskaEntities;
 import com.github.platymemo.alaskanativecraft.feature.AlaskaFeatures;
 import com.github.platymemo.alaskanativecraft.item.AlaskaItems;
 import com.github.platymemo.alaskanativecraft.recipe.AlaskaRecipes;
-import com.github.platymemo.alaskanativecraft.sound.AlaskaSoundEvents;
+//import com.github.platymemo.alaskanativecraft.sound.AlaskaSoundEvents;
 import com.github.platymemo.alaskanativecraft.tags.AlaskaTags;
 import net.fabricmc.api.ModInitializer;
 
@@ -23,7 +23,7 @@ public class AlaskaNativeCraft implements ModInitializer {
         AlaskaEntities.register();
         AlaskaFeatures.register();
         AlaskaTags.register();
-        AlaskaSoundEvents.register();
+//        AlaskaSoundEvents.register();
         AlaskaRecipes.register();
     }
 }
